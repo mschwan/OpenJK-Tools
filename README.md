@@ -6,17 +6,19 @@ the GNU GPLv2 license.
 
 ## Building the code
 
-The OpenJK tools use CMake to generate the project files or makefiles for the
-source code. The project files or makefiles can then be used to compile the
-source code.
+IBIze is being built using CMake and generated Makefiles. This works on all
+platforms, including Windows, Linux and MacOS.
+
+ModView and Assimilate are Visual Studio projects and as such only work on
+Windows.
 
 
 ### Windows
 
 Generate the project files either by following the Linux and macOS instructions
-or by using the CMake GUI. For the CMake GUI, the source directory should be
-the root of the repository. The build directory is a directory of your choice
-where the project files will be generated.
+or by using the CMake GUI. For the CMake GUI, the source directory should be the
+`ibize` directory in this repository. The build directory is a directory of your
+choice where the project files will be generated, e.g. `ibize/build/`.
 
 Load the generated project file (likely to be a Visual Studio project), and
 then build in the IDE.
@@ -24,16 +26,16 @@ then build in the IDE.
 
 ### Linux and macOS
 
-Generate the makefiles by running:
+Generate the makefiles (for IBIze only) by running:
 ```bash
+cd ibize
 mkdir build
 cd build
 cmake ..
 ```
 
-Compile the code:
+Compile the code, while being in `ibize/build/`:
 ```bash
-cd build
 make
 ```
 
